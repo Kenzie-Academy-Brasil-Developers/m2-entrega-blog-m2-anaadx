@@ -21,12 +21,32 @@ class ApiRequests {
             console.log(res)
             localStorage.setItem("S5-10: userId", res.userId)
             localStorage.setItem("S5-10: token", res.token)
-            
-        })
+            })
 
         .catch(err => console.log(err))
         return userLogin
     }
+
+    static async cadastrar(body) {
+
+        const newUser = await fetch (`${this.baseUrl}/users/register`,{
+
+        method : "POST",
+        headers: this.headers,
+        body: JSON.stringify(body)
+    })
+
+    .then(res => res.json())
+    .then(res => {
+        console.log(res)
+        localStorage.setItem("S5-10: userId", res.userId)
+        localStorage.setItem("S5-10: token", res.token)   
+    })
+
+        .catch(err => console.log(err))
+        return newUser
+    }
+    
 }
 
 export {ApiRequests}
