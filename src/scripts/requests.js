@@ -46,7 +46,30 @@ class ApiRequests {
         .catch(err => console.log(err))
         return newUser
     }
-    
+
+    static async getPosts() {
+        const posts = await fetch (`${this.baseUrl}/posts?page=64`, {
+            method : "GET",
+            headers: this.headers,
+        })    
+        .then (res => res.json())
+        .catch (err => console.log(err))
+
+        return posts
+    }
+
+    static async getUser() {
+        const user = await fetch (`${this.baseUrl}/users/${localStorage.getItem("S5-10: userId")}`, {
+            method : "GET",
+            headers: this.headers,
+        })    
+        .then (res => res.json())
+        .catch (err => console.log(err))
+
+        return user
+    }
 }
+
+
 
 export {ApiRequests}
