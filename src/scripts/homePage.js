@@ -28,10 +28,34 @@ class homePage{
 
         RenderDesktop.renderPostsListDesktop(posts)
     }
+
+    static logout (){
+        const btnLogout = document.getElementById("btnLogout")
+        btnLogout.addEventListener("click", (event) =>{
+            event.preventDefault()
+            localStorage.clear()
+            window.location.assign("../../index.html")
+        })
+    }
+
+    static async userInfo (){
+        const userImg = document.getElementById("userImg")
+        const userName = document.getElementById("userName")
+        const user = await ApiRequests.getUser()
+
+        userImg.src = user.avatarUrl
+        userName.innerText = user.username
+    }
 }
 
 const posts = await ApiRequests.getPosts()
 
 homePage.renderHomeDesktop(posts.data)
 homePage.renderHomeMobile(posts.data)
+
+ 
+
+
+homePage.userInfo()
+homePage.logout()
 

@@ -57,6 +57,17 @@ class ApiRequests {
 
         return posts
     }
+
+    static async getUser() {
+        const user = await fetch (`${this.baseUrl}/users/${localStorage.getItem("S5-10: userId")}`, {
+            method : "GET",
+            headers: this.headers,
+        })    
+        .then (res => res.json())
+        .catch (err => console.log(err))
+
+        return user
+    }
 }
 
 
