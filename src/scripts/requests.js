@@ -48,14 +48,29 @@ class ApiRequests {
     }
 
     static async getPosts() {
-        const posts = await fetch (`${this.baseUrl}/posts?page=64`, {
+
+        const posts = await fetch (`${this.baseUrl}/posts?page=1`, {
             method : "GET",
             headers: this.headers,
+            
         })    
+        
         .then (res => res.json())
         .catch (err => console.log(err))
 
         return posts
+    }
+
+    static async createPost (body) {
+        const newPosts = await fetch (`${this.baseUrl}/posts`, {
+            method : "POST",
+            headers: this.headers,body: JSON.stringify(body)
+        })    
+        
+        .then (res => res.json())
+        .catch (err => console.log(err))
+
+        return newPosts
     }
 
     static async getUser() {

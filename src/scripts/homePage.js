@@ -29,6 +29,21 @@ class homePage{
         RenderDesktop.renderPostsListDesktop(posts)
     }
 
+    static async renderCreatePost (){
+        const text = document.getElementById("inputCaixaDeTexto")
+        const btnPost = document.getElementById("btnPost")
+
+        btnPost.addEventListener("click", (event) => {
+            
+
+            const newPost = {
+                content: text.value
+            }
+            
+        ApiRequests.createPost(newPost)
+        })
+    }
+
     static logout (){
         const btnLogout = document.getElementById("btnLogout")
         btnLogout.addEventListener("click", (event) =>{
@@ -48,10 +63,13 @@ class homePage{
     }
 }
 
+
+
 const posts = await ApiRequests.getPosts()
 
 homePage.renderHomeDesktop(posts.data)
 homePage.renderHomeMobile(posts.data)
+homePage.renderCreatePost()
 
  
 
