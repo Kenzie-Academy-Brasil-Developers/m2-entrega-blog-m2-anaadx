@@ -55,6 +55,12 @@ main{
     color: white;
 }
 
+.container__posts1 li figure img {
+    width: 122px;
+    height: 115px;
+    border-radius: 100px;
+}
+
 .botoesPost{
     display: flex;
     gap: 10px;

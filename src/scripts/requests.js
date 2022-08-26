@@ -46,7 +46,19 @@ class ApiRequests {
         .catch(err => console.log(err))
         return newUser
     }
-    
+
+    static async getPosts() {
+        const posts = await fetch (`${this.baseUrl}/posts?page=64`, {
+            method : "GET",
+            headers: this.headers,
+        })    
+        .then (res => res.json())
+        .catch (err => console.log(err))
+
+        return posts
+    }
 }
+
+
 
 export {ApiRequests}
