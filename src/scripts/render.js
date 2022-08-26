@@ -32,7 +32,8 @@ export class RenderMobile {
         const btnDelete = document.createElement("button")
         const imgDelete =document.createElement("img")
 
-        const user = localStorage.getItem("S5-10: token")
+        const user = localStorage.getItem("S5-10: userId")
+        console.log(user)
 
         li.key = post.user.id
         li.id = post.user.id
@@ -112,7 +113,7 @@ export class RenderDesktop {
         const postText = document.createElement("p")
         const postData = document.createElement("p")
         
-        const user = localStorage.getItem("S5-10: token")
+        const user = localStorage.getItem("S5-10: userId")
 
         li.key = post.user.id
         li.id = post.user.id
