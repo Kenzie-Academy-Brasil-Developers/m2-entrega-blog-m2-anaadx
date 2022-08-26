@@ -1,7 +1,7 @@
-:root{
+:root {
     --azulForte: #152b5d;
     --branco: #ffff;
-    --azulClaro:#83a3ca;
+    --azulClaro: #83a3ca;
     --azulMaisClaro: #bfd4ec;
 }
 
@@ -12,7 +12,7 @@ body {
 }
 
 /* HEADER */
-header{
+header {
     display: flex;
     justify-content: space-between;
     background-color: var(--azulForte);
@@ -20,30 +20,30 @@ header{
     margin-bottom: 30px;
 }
 
-header button{
+header button {
     padding: 5px 15px;
     background-color: white;
     border-radius: 5px;
 }
 
 /* MAIN */
-main{
+main {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
 
-/* POSTS */
-.container__posts1{
+/* POSTS 1 */
+.container__posts1 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px
+    gap: 20px
 }
 
-.container__posts1 li{
+.container__posts1 li {
     width: 80%;
     height: 300px;
     display: flex;
@@ -55,13 +55,13 @@ main{
     color: white;
 }
 
-.botoesPost{
+.botoesPost {
     display: flex;
     gap: 10px;
     align-self: center;
 }
 
-.botoesPost button{
+.botoesPost button {
     background-color: white;
     display: flex;
     align-items: center;
@@ -72,18 +72,15 @@ main{
     border: 0;
 }
 
-.botoesPost button img{
+.botoesPost button img {
     margin-top: 5px;
     width: 110%;
     border-radius: 10px;
 }
 
-.container__posts2{
-    display: none;
-}
 
 /* CAIXA DE TEXTO */
-.caixaDeTexto{
+.caixaDeTexto {
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -96,14 +93,14 @@ main{
     gap: 5px;
 }
 
-.caixaDeTexto input{
+.caixaDeTexto input {
     width: 95%;
     height: 75%;
     align-self: baseline;
     border: 0;
 }
 
-.caixaDeTexto button{
+.caixaDeTexto button {
     background-color: var(--azulForte);
     display: flex;
     align-items: center;
@@ -115,8 +112,89 @@ main{
     align-self: flex-end;
 }
 
-.caixaDeTexto button img{
+.caixaDeTexto button img {
     height: 100%;
 }
 
+@media (max-width: 800px) {
+    .container__posts2 {
+        display: none;
+    }
+}
 
+@media (min-width: 801px) {
+
+    .container__posts1 {
+        display: none;
+    }
+
+    /* POSTS 2 */
+    .container__posts2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px
+    }
+
+    .container__posts2 li {
+        width: 50%;
+        height: 200px;
+        display: flex;
+        background-color: var(--azulForte);
+        border-radius: 10px;
+        padding: 15px;
+        justify-content: space-between;
+        color: white;
+    }
+
+    .container__posts2__imagemEBotoes{
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        align-self: baseline;
+    }
+
+    .container__posts2__parteEscrita{
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 100%;
+        margin-left: 15px;
+    }
+
+    .container__posts2__parteEscrita h2{
+        margin-bottom: 50px;
+        margin-top: 10px;
+    }
+
+    .container__posts2__parteEscrita__data{
+        display: flex;
+        align-self: flex-end;
+        margin-top: 50px;
+    }
+
+    .botoesPost button {
+        background-color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        border: 0;
+    }
+    
+    .botoesPost button img {
+        margin-top: 5px;
+        width: 110%;
+        border-radius: 10px;
+    }
+
+    /* CAIXA DE TEXTO */
+
+    .caixaDeTexto {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
