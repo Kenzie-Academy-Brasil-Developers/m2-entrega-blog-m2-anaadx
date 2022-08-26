@@ -29,7 +29,7 @@ class ApiRequests {
 
     static async cadastrar(body) {
 
-        const newUser = await fetch (`${this.baseUrl}/users/register`,{
+        const newUser = await fetch (`${this.baseUrl}/users/register `,{
 
         method : "POST",
         headers: this.headers,

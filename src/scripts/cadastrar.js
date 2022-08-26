@@ -11,17 +11,19 @@ class cadastrar {
         const btnCadastrar = document.getElementById("btnCadastro")
 
         btnCadastrar.addEventListener("click", async (event) => {
+
             event.preventDefault()
+
             const data = {
+
                 username: nameInput.value,
                 email: emailInput.value,
                 avatarUrl: avatarInput.value,
                 password: passwordInput.value
             }
+
             await ApiRequests.cadastrar(data)
         })
-
-
     }
 }
 
