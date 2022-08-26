@@ -2,8 +2,10 @@ import { ApiRequests } from "./requests.js"
 
 
 class LoginPage {
+
     static doLogin() {
         const token = localStorage.getItem("S5-10: token")
+
         if(token) {
             window.location.assign("src/pages/homePage.html")
         }
@@ -21,12 +23,7 @@ class LoginPage {
             ApiRequests.login(data)
             
         })
-        
     }
-    static doCadastre() {
-        
-    }
-    
 }
 
 
