@@ -1,5 +1,6 @@
 import { ApiRequests } from "./requests.js"
 
+
 class LoginPage {
     static doLogin() {
         const token = localStorage.getItem("S5-10: token")
@@ -27,6 +28,8 @@ class LoginPage {
     }
     
 }
+
+
 LoginPage.doLogin()
 
 
