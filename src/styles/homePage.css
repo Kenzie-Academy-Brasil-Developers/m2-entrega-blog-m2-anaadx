@@ -33,8 +33,6 @@ main {
     gap: 30px;
 }
 
-<<<<<<< HEAD
-=======
 
 /* POSTS */
 .container__posts1{
@@ -90,7 +88,6 @@ main {
     display: none;
 }
 
->>>>>>> b8e813d90e74c47231f749dc3ae75313a2daf47a
 /* CAIXA DE TEXTO */
 .caixaDeTexto {
     display: flex;
