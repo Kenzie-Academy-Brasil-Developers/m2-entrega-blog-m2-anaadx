@@ -3,7 +3,7 @@ import { ApiRequests } from "./requests.js"
 
 class LoginPage {
 
-    static doLogin() {
+    static async doLogin() {
         const token = localStorage.getItem("S5-10: token")
 
         if(token) {
@@ -20,9 +20,8 @@ class LoginPage {
                 email: emailInput.value,
                 password: passwordInput.value
             }
+
             ApiRequests.login(data)
-            
-            
             
         })
         

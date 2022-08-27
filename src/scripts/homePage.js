@@ -29,11 +29,11 @@ class homePage{
         RenderDesktop.renderPostsListDesktop(posts)
     }
 
-    static async renderCreatePost (){
+    static renderCreatePost (){
         const text = document.getElementById("inputCaixaDeTexto")
         const btnPost = document.getElementById("btnPost")
 
-        btnPost.addEventListener("click", (event) => {
+        btnPost.addEventListener("click", () => {
             
 
             const newPost = {
@@ -63,16 +63,11 @@ class homePage{
     }
 }
 
-
-
-const posts = await ApiRequests.getPosts()
+const posts = await ApiRequests.getPosts("page=1")
 
 homePage.renderHomeDesktop(posts.data)
 homePage.renderHomeMobile(posts.data)
 homePage.renderCreatePost()
-
- 
-
 
 homePage.userInfo()
 homePage.logout()

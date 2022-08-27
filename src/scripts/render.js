@@ -33,7 +33,7 @@ export class RenderMobile {
         const imgDelete =document.createElement("img")
 
         const user = localStorage.getItem("S5-10: userId")
-        console.log(user)
+        
 
         li.key = post.user.id
         li.id = post.user.id

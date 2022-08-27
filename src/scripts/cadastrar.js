@@ -23,7 +23,9 @@ class cadastrar {
             }
 
             await ApiRequests.cadastrar(data)
+            
         })
+        
     }
 }
 
