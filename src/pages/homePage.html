@@ -13,14 +13,15 @@
 <body>
     <header>
         <figure>
-            <img src=""> <!-- foto de perfil -->
+            <img id="userImg"> <!-- foto de perfil -->
         </figure>
-        <button>logout</button>
+        <p id="userName"></p>
+        <button id="btnLogout">logout</button>
     </header>
     <main>
         <section class="caixaDeTexto">
             <input type="text" id="inputCaixaDeTexto" placeholder="Pode desabafar dev...">
-            <button type="submit"><img src="../assets/adicionarBranco.png"></button>
+            <button type="submit" id="btnPost"><img src="../assets/adicionarBranco.png"></button>
         </section>
 
         <section class="posts">
@@ -90,6 +91,7 @@
 
         </section>
     </main>
+    <script type="module" src="../scripts/homepage.js" ></script>
 </body>
 
 </html>
