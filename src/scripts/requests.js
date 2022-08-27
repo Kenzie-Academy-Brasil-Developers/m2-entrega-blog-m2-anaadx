@@ -18,9 +18,10 @@ class ApiRequests {
 
         .then(res => res.json())
         .then(res => {
-            console.log(res)
             localStorage.setItem("S5-10: userId", res.userId)
-            localStorage.setItem("S5-10: token", res.token)
+            localStorage.setItem("S5-10: token", res.token || '')
+            window.location.assign("src/pages/homePage.html")
+            return res
             })
 
         .catch(err => console.log(err))
@@ -36,23 +37,19 @@ class ApiRequests {
         body: JSON.stringify(body)
     })
 
-    .then(res => res.json())
-    .then(res => {
-        console.log(res)
-        localStorage.setItem("S5-10: userId", res.userId)
-        localStorage.setItem("S5-10: token", res.token)   
-    })
-
+        .then(res => res.json())
+        .then(res => { 
+            console.log(res)
+            window.location.assign("../../index.html")
+        })
         .catch(err => console.log(err))
         return newUser
     }
 
-    static async getPosts() {
-
-        const posts = await fetch (`${this.baseUrl}/posts?page=1`, {
+    static async getPosts(page) {
+        const posts = await fetch (`${this.baseUrl}/posts?${page}`, {
             method : "GET",
-            headers: this.headers,
-            
+            headers: this.headers,     
         })    
         
         .then (res => res.json())
@@ -64,10 +61,15 @@ class ApiRequests {
     static async createPost (body) {
         const newPosts = await fetch (`${this.baseUrl}/posts`, {
             method : "POST",
-            headers: this.headers,body: JSON.stringify(body)
+            headers: this.headers,
+            body: JSON.stringify(body)
         })    
         
         .then (res => res.json())
+        .then (res => {
+            console.log(res)
+            window.location.assign("../pages/homePage.html")
+        })
         .catch (err => console.log(err))
 
         return newPosts
