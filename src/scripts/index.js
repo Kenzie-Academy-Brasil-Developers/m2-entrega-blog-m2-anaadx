@@ -23,7 +23,9 @@ class LoginPage {
             ApiRequests.login(data)
             
             
+            
         })
+        
     }
 }
 

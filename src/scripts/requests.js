@@ -20,8 +20,9 @@ class ApiRequests {
         .then(res => {
             console.log(res)
             localStorage.setItem("S5-10: userId", res.userId)
-            localStorage.setItem("S5-10: token", res.token)
+            localStorage.setItem("S5-10: token", res.token || '')
             })
+        
 
         .catch(err => console.log(err))
         return userLogin
@@ -64,7 +65,8 @@ class ApiRequests {
     static async createPost (body) {
         const newPosts = await fetch (`${this.baseUrl}/posts`, {
             method : "POST",
-            headers: this.headers,body: JSON.stringify(body)
+            headers: this.headers,
+            body: JSON.stringify(body)
         })    
         
         .then (res => res.json())
