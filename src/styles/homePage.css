@@ -241,6 +241,12 @@ main {
 
 }
 
+/* MODAL HIDDEN 1 */
+ .hidden{
+    display: none;
+ }
+
+
 
 @media (max-width: 800px) {
     .container__posts2 {
@@ -388,4 +394,5 @@ main {
         width: 25%;
         font-size:  90%;
     }
+
 }

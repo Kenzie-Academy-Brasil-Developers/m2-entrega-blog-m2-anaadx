@@ -85,6 +85,36 @@ class ApiRequests {
 
         return user
     }
+
+    static async updatePost(body, id){
+        const post = await fetch (`${this.baseUrl}/posts/${localStorage.getItem(id)}`, {
+            method : "PATCH",
+            headers: this.headers,
+            body: JSON.stringify(body)
+        })    
+        .then (res => res.json())
+        .catch (err => console.log(err))
+
+        return post
+    }
+
+    static async deletePost(id) {
+        const deletedPost = await fetch(`${this.baseUrl}/posts/${localStorage.getItem(id)}`, {
+          method: "DELETE",
+          headers: this.headers
+        })
+        .then(res => res.json())
+        .then(res => {
+          alert('produto removido com sucesso')
+          return res
+        })
+        .catch(err => {
+          alert(`message: ${err}`)
+        })
+    
+        return deletedPost
+      }
+    
 }
 
 

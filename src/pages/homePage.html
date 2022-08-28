@@ -35,8 +35,8 @@
                     <p>o que está escrito no post que pegamos do input</p>
                     <p>data do post</p>
                     <div class="botoesPost">
-                        <button><img src="../assets/lapis.jpg"></button>
-                        <button><img src="../assets/lixeira.jpg"></button>
+                        <button class="buttonEdit"><img src="../assets/lapis.jpg"></button>
+                        <button class="buttonDelete"><img src="../assets/lixeira.jpg"></button>
                     </div>
 
                 </li>
@@ -49,8 +49,8 @@
                             <img src=""> <!-- foto de perfil do post -->
                         </figure>
                         <div class="botoesPost">
-                            <button><img src="../assets/lapis.jpg"></button>
-                            <button><img src="../assets/lixeira.jpg"></button>
+                            <button class="buttonEdit"><img src="../assets/lapis.jpg"></button>
+                            <button class="buttonDelete"><img src="../assets/lixeira.jpg"></button>
                         </div>
                     </div>
                     <div class="container__posts2__parteEscrita">
@@ -61,31 +61,32 @@
                 </li>
             </ul>
 
-            <section class="main__modais">
+            <!-- MODAIS -->
+            <section class="main__modais modal hidden">
                  <div class="main__modais__modalEdit1">
                     <button id="buttonClose"><img src="../assets/close.jpg"></button>
                     <h2>Editar</h2>      
-                    <input type="text" id="main__modais__modalEdit1__input" placeholder="Editar comentário...">
-                    <button id="main__modais__modalEdit1__buttonEdit">Enviar</button>
+                    <input type="text" id="main__modais__modalEdit1__input editPost" placeholder="Editar comentário...">
+                    <button id="main__modais__modalEdit1__buttonEdit editBtn">Enviar</button>
                 </div> 
     
                  <!-- <div class="main__modais__modalDelete1">
                     <button id="buttonClose"><img src="../assets/close.jpg"></button>
                     <h2>Deseja deletar o seu post?</h2>  
-                    <button id="main__modais__modalDelete1__buttonDelete">Deletar</button>
+                    <button id="main__modais__modalDelete1__buttonDelete deleteBtn">Deletar</button>
                 </div>
      -->
                 <div class="main__modais__modalEdit2">
                     <button id="buttonClose"><img src="../assets/close.jpg"></button>
                     <h2>Editar</h2>
-                    <input type="text" id="main__modais__modalEdit2__input" placeholder="Editar comentário...">
-                    <button id="main__modais__modalEdit2__buttonEdit">Enviar</button>
+                    <input type="text" id="main__modais__modalEdit2__input editPost" placeholder="Editar comentário...">
+                    <button id="main__modais__modalEdit2__buttonEdit editBtn">Enviar</button>
                 </div> 
      
                 <!-- <div class="main__modais__modalDelete2">
                     <button id="buttonClose"><img src="../assets/close.jpg"></button>
                     <h2>Deseja deletar o seu post?</h2>  
-                    <button id="main__modais__modalDelete2__buttonDelete">Deletar</button>
+                    <button id="main__modais__modalDelete2__buttonDelete deleteBtn">Deletar</button>
                 </div> -->
             </section>
 

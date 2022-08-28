@@ -1,35 +1,38 @@
 export class Modal {
-    static showModal() {
-      const modalBtn = document.querySelectorAll('.modalBtn')
-      const modal = document.querySelector('.modal')
-  
-      modalBtn.forEach((btn) => {
-        btn.addEventListener('click', () => {
-          modal.classList.toggle('hidden')
-        })
-      })
-    }
-  
-    static closeModal() {
-      const closeBtn = document.getElementById('closeBtn')
-      const modal = document.querySelector('.modal')
-  
-      closeBtn.addEventListener('click', () => {
-        modal.classList.add('hidden')
-      })
-    }
-  
     static showEditModal() {
-      const modalBtn = document.querySelectorAll('.modalEditBtn')
-      const modal = document.getElementById('editModal')
+      const modalEdit = document.querySelector(".modal")
+      const modalEditButton = document.querySelectorAll(".buttonEdit")
+      
   
-      modalBtn.forEach(btn => {
+      modalEditButton.forEach((btn) => {
         btn.addEventListener('click', (event) => {
-          localStorage.setItem('@kenzieStore:itemId', event.target.id)
-          modal.classList.toggle('hidden')
+          localStorage.setItem("S5-10: postId", event.target.id)
+          modalEdit.classList.toggle('hidden')
         })
       })
-    }
     }
 
+    static closeModal() {
+    
+    const closeBtn = document.querySelector('#buttonClose')
+    const modal = document.querySelector('.modal')
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden')
+    })
+  }
+
+  static showDeleteModal() {
+    const modalDeleteBtn = document.querySelectorAll('.buttonDelete')
+    const modal = document.querySelector('.modal')
+
+    modalDeleteBtn.forEach(btn => {
+      btn.addEventListener('click', (event) => {
+        localStorage.setItem("S5-10: postId", event.target.id)
+        modal.classList.toggle('hidden')
+      })
+    })
+  }
+
+}
     
