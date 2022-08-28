@@ -293,6 +293,12 @@ main {
         justify-content: space-between;
         color: white;
     }
+    
+    .container__posts2 li figure img {
+        width: 122px;
+        height: 115px;
+        border-radius: 100px;
+    }
 
     .container__posts2__imagemEBotoes {
         display: flex;
