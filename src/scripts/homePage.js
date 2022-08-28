@@ -1,6 +1,8 @@
 import { ApiRequests } from "./requests.js";
 import { Modal } from "./modal";
 import { RenderDesktop, RenderMobile} from "./render.js"
+import { UpdatePostClass } from "./edit"
+import { Delete} from "./delete"
 
 export class homePage{
 
@@ -75,7 +77,10 @@ homePage.logout()
 
 Modal.showEditModal()
 Modal.showDeleteModal()
-Modal.closeModal()()
+Modal.closeModal()
+
+Delete.deletePost()
+UpdatePostClass.updatePost()
 
 
 

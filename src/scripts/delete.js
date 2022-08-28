@@ -16,7 +16,7 @@ export class Delete {
             modal2.classList.add('hidden')
             localStorage.removeItem('S5-10: postId')
 
-            const posts = await ApiRequests.getPosts() //falta parametros/page?
+            const posts = await ApiRequests.getPosts("page=1") 
             homePage.renderHomeMobile (posts)
             homePage.renderHomeDesktop (posts)
             Modal.showDeleteModal()

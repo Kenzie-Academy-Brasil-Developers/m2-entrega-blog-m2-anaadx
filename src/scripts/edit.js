@@ -2,7 +2,7 @@ import { ApiRequests } from "./requests.js";
 import { Modal } from "./modal";
 import { homePage } from "./homePage";
 
-export class updatePostClass { 
+export class UpdatePostClass { 
 
     static updatePost () {
         const updateBtn = document.querySelector('#editBtn')
@@ -25,7 +25,7 @@ export class updatePostClass {
           modal2.classList.add('hidden')
           localStorage.removeItem("S5-10: postId")
     
-          const posts = await ApiRequests.getPosts() //onde pega a Page que precisa passar por parametro?
+          const posts = await ApiRequests.getPosts("page=1")
           homePage.renderHomeMobile (posts)
           homePage.renderHomeDesktop (posts)
           Modal.showEditModal()
