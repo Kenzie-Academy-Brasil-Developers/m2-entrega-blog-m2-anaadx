@@ -22,6 +22,7 @@ export class RenderMobile {
 
         const autor = document.createElement("h2")
         const postText = document.createElement("p")
+        postText.classList.add("escritoPost")
         const postData = document.createElement("p")
 
         const divBtn = document.createElement("div")

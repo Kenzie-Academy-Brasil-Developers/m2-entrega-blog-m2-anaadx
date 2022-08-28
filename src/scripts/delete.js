@@ -5,7 +5,7 @@ export class Delete {
     static deletePostMobile() {
         const deleteModalBtn = document.querySelector(".buttonDelete")
         const modal = document.querySelector('.main__modais__modalDelete1')
-        const deleteBtn = document.getElementById("main__modais__modalDelete1__buttonDelete deleteBtn")
+        const deleteBtn = document.getElementById("main__modais__modalDelete1__buttonDelete")
         
         if(deleteModalBtn){
 
@@ -24,7 +24,7 @@ export class Delete {
     static deletePostDesktop() {
         const deleteModalBtn = document.querySelector(".buttonDelete")
         const modal = document.querySelector('.main__modais__modalDelete2')
-        const deleteBtn = document.getElementById("main__modais__modalDelete2__buttonDelete deleteBtn")
+        const deleteBtn = document.getElementById("main__modais__modalDelete2__buttonDelete")
         
         if(deleteModalBtn){
 

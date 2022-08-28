@@ -7,8 +7,8 @@ export class UpdatePostCard {
   static updateMobile () {
     const updateModalBtn = document.querySelector('.buttonEdit')
     const modal1 = document.querySelector('.main__modais__modalEdit1')
-    const postEditContent = document.getElementById("main__modais__modalEdit1__input editPost")
-    const updateBtn = document.getElementById("main__modais__modalEdit1__buttonEdit editBtn")
+    const postEditContent = document.getElementById("main__modais__modalEdit1__input")
+    const updateBtn = document.getElementById("main__modais__modalEdit1__buttonEdit")
     
 
     if(updateModalBtn){
@@ -35,8 +35,8 @@ export class UpdatePostCard {
 static updateDesktop () {
   const updateModalBtn = document.querySelector('.buttonEdit')
   const modal1 = document.querySelector('.main__modais__modalEdit2')
-  const postEditContent = document.getElementById("main__modais__modalEdit2__input editPost")
-  const updateBtn = document.getElementById("main__modais__modalEdit2__buttonEdit editBtn")
+  const postEditContent = document.getElementById("main__modais__modalEdit2__input")
+  const updateBtn = document.getElementById("main__modais__modalEdit2__buttonEdit")
   
 
   if(updateModalBtn){

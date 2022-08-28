@@ -11,11 +11,46 @@
 </head>
 
 <body>
+
+    <!-- MODAIS -->
+    <section class="modaisContainer">
+        <section id="modalEdit" class="main__modais modal hidden">
+
+            <div class="main__modais__modalEdit1">
+                <button id="buttonClose"><img src="../assets/close.jpg"></button>
+                <h2>Editar</h2>
+                <input type="text" id="main__modais__modalEdit1__input" placeholder="Editar comentário...">
+                <button id="main__modais__modalEdit1__buttonEdit">Enviar</button>
+            </div>
+            <div class="main__modais__modalEdit2">
+                <button id="buttonClose"><img src="../assets/close.jpg"></button>
+                <h2>Editar</h2>
+                <input type="text" id="main__modais__modalEdit2__input" placeholder="Editar comentário...">
+                <button id="main__modais__modalEdit2__buttonEdit">Enviar</button>
+            </div>
+        </section>
+
+        <section id="modalDelete" class="main__modais modal hidden">
+            <div class="main__modais__modalDelete1">
+                <button id="buttonClose"><img src="../assets/close.jpg"></button>
+                <h2>Deseja deletar o seu post?</h2>
+                <button id="main__modais__modalDelete1__buttonDelete">Deletar</button>
+            </div>
+
+            <div class="main__modais__modalDelete2">
+                <button id="buttonClose"><img src="../assets/close.jpg"></button>
+                <h2>Deseja deletar o seu post?</h2>
+                <button id="main__modais__modalDelete2__buttonDelete">Deletar</button>
+            </div>
+        </section>
+    </section>
     <header>
-        <figure>
-            <img id="userImg"> <!-- foto de perfil -->
-        </figure>
-        <p id="userName"></p>
+        <div class="header__fotoENome">
+            <figure>
+                <img id="userImg"> <!-- foto de perfil -->
+            </figure>
+            <p id="userName"></p>
+        </div>
         <button id="btnLogout">logout</button>
     </header>
     <main>
@@ -59,41 +94,9 @@
                     </div>
                 </li>
             </ul>
-
-            <!-- MODAIS -->
-            <section id="modalEdit" class="main__modais modal hidden">
-
-                 <div class="main__modais__modalEdit1">
-                    <button id="buttonClose"><img src="../assets/close.jpg"></button>
-                    <h2>Editar</h2>      
-                    <input type="text" id="main__modais__modalEdit1__input editPost" placeholder="Editar comentário...">
-                    <button id="main__modais__modalEdit1__buttonEdit editBtn">Enviar</button>
-                </div> 
-                <div class="main__modais__modalEdit2">
-                    <button id="buttonClose"><img src="../assets/close.jpg"></button>
-                    <h2>Editar</h2>
-                    <input type="text" id="main__modais__modalEdit2__input editPost" placeholder="Editar comentário...">
-                    <button id="main__modais__modalEdit2__buttonEdit editBtn">Enviar</button>
-                </div> 
-            </section>
-
-            <section id="modalDelete" class="main__modais modal hidden">
-                 <div class="main__modais__modalDelete1">
-                    <button id="buttonClose"><img src="../assets/close.jpg"></button>
-                    <h2>Deseja deletar o seu post?</h2>  
-                    <button id="main__modais__modalDelete1__buttonDelete deleteBtn">Deletar</button>
-                </div>
-     
-                <div class="main__modais__modalDelete2">
-                    <button id="buttonClose"><img src="../assets/close.jpg"></button>
-                    <h2>Deseja deletar o seu post?</h2>  
-                    <button id="main__modais__modalDelete2__buttonDelete deleteBtn">Deletar</button>
-                </div>
-            </section>
-
         </section>
     </main>
-    <script type="module" src="../scripts/homepage.js" ></script>
+    <script type="module" src="../scripts/homepage.js"></script>
 </body>
 
 </html>

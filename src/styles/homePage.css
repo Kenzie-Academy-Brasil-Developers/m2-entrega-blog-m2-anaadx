@@ -5,6 +5,10 @@
     --azulMaisClaro: #bfd4ec;
 }
 
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 body {
     width: 100vw;
     height: 100vh;
@@ -18,12 +22,26 @@ header {
     background-color: var(--azulForte);
     padding: 20px;
     margin-bottom: 30px;
+    align-content: center;
 }
 
 header button {
+    width: 100px;
+    height: 40px;
     padding: 5px 15px;
     background-color: white;
     border-radius: 5px;
+}
+
+.header__fotoENome{
+    display: flex;
+    gap: 30px;
+}
+
+.header__fotoENome figure img{
+    width: 122px;
+    height: 115px;
+    border-radius: 100px;
 }
 
 /* MAIN */
@@ -147,6 +165,10 @@ main {
     color: white;
 }
 
+.escritoPost{
+    word-break: break-word;
+}
+
 .botoesPost {
     display: flex;
     gap: 10px;
@@ -168,6 +190,18 @@ main {
     margin-top: 5px;
     width: 110%;
     border-radius: 10px;
+}
+
+/* MODAL*/
+
+.modalContainer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute; 
+    align-items: center;
 }
 
 /* MODAL EDIT 1 */
