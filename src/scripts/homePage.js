@@ -1,6 +1,6 @@
-import { ApiRequests } from "./requests.js";
-import { Modal } from "./modal.js";
+import { ApiRequests } from "./requests.js"
 import { RenderDesktop, RenderMobile} from "./render.js"
+import { Modal } from "./modal.js"
 import { UpdatePostClass } from "./edit.js"
 import { Delete} from "./delete.js"
 
@@ -44,6 +44,7 @@ export class homePage{
             }
             
         ApiRequests.createPost(newPost)
+        
         })
     }
 

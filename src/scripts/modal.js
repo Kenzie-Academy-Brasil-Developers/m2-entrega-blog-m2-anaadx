@@ -19,6 +19,7 @@ export class Modal {
 
     closeBtn.addEventListener('click', () => {
       modal.classList.add('hidden')
+      window.location.assign("../pages/homePage.html")
     })
   }
 
