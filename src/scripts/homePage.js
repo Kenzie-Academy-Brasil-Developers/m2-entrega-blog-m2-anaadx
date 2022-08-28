@@ -84,7 +84,8 @@ Modal.showEditModal()
 Modal.showDeleteModal()
 Modal.closeDeleteModal()
 
-
+Delete.deletePostDesktop()
+Delete.deletePostMobile()
 
 UpdatePostCard.update()
 
