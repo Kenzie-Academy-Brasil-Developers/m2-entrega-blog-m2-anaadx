@@ -2,7 +2,6 @@
 export class RenderMobile {
     
     static renderPostsListMobile(array)  {
-        console.log("OK render M")
         const section = document.querySelector(".posts")
         const ul = document.querySelector(".container__posts1")
         section.append(ul)
@@ -29,9 +28,11 @@ export class RenderMobile {
         divBtn.classList.add("botoesPost")
 
         const btnEdit = document.createElement("button")
+        btnEdit.classList.add("buttonEdit")
         const imgEdit =document.createElement("img")
 
         const btnDelete = document.createElement("button")
+        btnDelete.classList.add("buttonDelete")
         const imgDelete =document.createElement("img")
 
         const user = localStorage.getItem("S5-10: userId")
@@ -77,7 +78,7 @@ export class RenderMobile {
 
 export class RenderDesktop {
     static renderPostsListDesktop(array)  {
-        console.log("OK render")
+        
 
         const section = document.querySelector(".posts")
         const ul = document.querySelector(".container__posts2")
