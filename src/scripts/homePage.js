@@ -87,7 +87,8 @@ Modal.closeDeleteModal()
 Delete.deletePostDesktop()
 Delete.deletePostMobile()
 
-UpdatePostCard.update()
+UpdatePostCard.updateMobile()
+UpdatePostCard.updateDesktop()
 
 
 

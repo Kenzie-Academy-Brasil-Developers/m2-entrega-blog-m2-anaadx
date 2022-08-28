@@ -4,34 +4,61 @@ import { Modal } from "./modal.js"
 
 export class UpdatePostCard { 
 
-  static update () {
+  static updateMobile () {
     const updateModalBtn = document.querySelector('.buttonEdit')
     const modal1 = document.querySelector('.main__modais__modalEdit1')
-    const modal2 = document.querySelector('.main__modais__modalEdit2')
-    const postEditContent = document.getElementById("main__modais__modalEdit__input editPost")
-    const updateBtn = document.querySelectorAll("#main__modais__modalEdit__buttonEdit editBtn")
+    const postEditContent = document.getElementById("main__modais__modalEdit1__input editPost")
+    const updateBtn = document.getElementById("main__modais__modalEdit1__buttonEdit editBtn")
     
 
-//     if(updateModalBtn){
-//       updateBtn.addEventListener('click', async (event) => {
-//          console.log("ok")
+    if(updateModalBtn){
+      updateBtn.addEventListener('click', async (event) => {
+        event.preventDefault()
+      
 
-//         const updatePostId = localStorage.getItem("S5-10: postId")
-//         console.log(updatePostId)
+        const updatePostId = localStorage.getItem("S5-10: postId")
+    
 
-//         const data = {
-//           content: postEditContent.value
-//         }
-//         console.log(data)
-//         await ApiRequests.updatePost(data, updatePostId)
+        const data = {
+          content: postEditContent.value
+        }
+        console.log(data)
+        await ApiRequests.updatePost(data, updatePostId)
 
-//         modal1.classList.add('hidden')
-//         modal2.classList.add('hidden')
-//         localStorage.removeItem("S5-10: postId")
+        modal1.classList.add('hidden')
         
-        
-//       })
-//     }
+        localStorage.removeItem("S5-10: postId")
+        window.location.assign("../pages/homePage.html")
+      })
+    }
+}
+static updateDesktop () {
+  const updateModalBtn = document.querySelector('.buttonEdit')
+  const modal1 = document.querySelector('.main__modais__modalEdit2')
+  const postEditContent = document.getElementById("main__modais__modalEdit2__input editPost")
+  const updateBtn = document.getElementById("main__modais__modalEdit2__buttonEdit editBtn")
+  
+
+  if(updateModalBtn){
+    updateBtn.addEventListener('click', async (event) => {
+      event.preventDefault()
+    
+
+      const updatePostId = localStorage.getItem("S5-10: postId")
+  
+
+      const data = {
+        content: postEditContent.value
+      }
+      console.log(data)
+      await ApiRequests.updatePost(data, updatePostId)
+
+      modal1.classList.add('hidden')
+      
+      localStorage.removeItem("S5-10: postId")
+      window.location.assign("../pages/homePage.html")
+    })
+  }
 }
 }
 
