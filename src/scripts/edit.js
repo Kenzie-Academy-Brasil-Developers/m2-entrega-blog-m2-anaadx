@@ -20,7 +20,7 @@ export class updatePostClass {
             
           }
     
-          await ApiRequests.updatePost(data, updatePostId) //precisa passar o id por parametro será?
+          await ApiRequests.updatePost(data, updatePostId)
           modal1.classList.add('hidden')
           modal2.classList.add('hidden')
           localStorage.removeItem("S5-10: postId")

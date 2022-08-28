@@ -246,8 +246,6 @@ main {
     display: none;
  }
 
-
-
 @media (max-width: 800px) {
     .container__posts2 {
         display: none;

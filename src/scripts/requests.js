@@ -105,11 +105,11 @@ class ApiRequests {
         })
         .then(res => res.json())
         .then(res => {
-          alert('produto removido com sucesso')
+          console.log('produto removido com sucesso')
           return res
         })
         .catch(err => {
-          alert(`message: ${err}`)
+          console.log(`message: ${err}`)
         })
     
         return deletedPost
