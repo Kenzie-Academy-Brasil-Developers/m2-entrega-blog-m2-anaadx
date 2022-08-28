@@ -1,7 +1,10 @@
 import { ApiRequests } from "./requests.js";
+import { Modal } from "./modal";
 import { RenderDesktop, RenderMobile} from "./render.js"
+import { UpdatePostClass } from "./edit"
+import { Delete} from "./delete"
 
-class homePage{
+export class homePage{
 
     static renderHomeMobile (posts) {
         const token = localStorage.getItem("S5-10: token")
@@ -72,4 +75,13 @@ homePage.renderCreatePost()
 
 homePage.userInfo()
 homePage.logout()
+
+Modal.showEditModal()
+Modal.showDeleteModal()
+Modal.closeModal()
+
+Delete.deletePost()
+UpdatePostClass.updatePost()
+
+
 
