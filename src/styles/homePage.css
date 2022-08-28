@@ -20,6 +20,18 @@ header {
     margin-bottom: 30px;
 }
 
+header figure {
+    width: 100px;
+    height: 100px;
+
+}
+
+header figure img {
+    width: 122px;
+    height: 115px;
+    border-radius: 100px;
+}
+
 header button {
     padding: 5px 15px;
     background-color: white;
@@ -35,15 +47,15 @@ main {
 
 
 /* POSTS */
-.container__posts1{
+.container__posts1 {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:20px
+    gap: 20px
 }
 
-.container__posts1 li{
+.container__posts1 li {
     width: 80%;
     height: 300px;
     display: flex;
@@ -61,13 +73,13 @@ main {
     border-radius: 100px;
 }
 
-.botoesPost{
+.botoesPost {
     display: flex;
     gap: 10px;
     align-self: center;
 }
 
-.botoesPost button{
+.botoesPost button {
     background-color: white;
     display: flex;
     align-items: center;
@@ -78,13 +90,13 @@ main {
     border: 0;
 }
 
-.botoesPost button img{
+.botoesPost button img {
     margin-top: 5px;
     width: 110%;
     border-radius: 10px;
 }
 
-.container__posts2{
+.container__posts2 {
     display: none;
 }
 
@@ -202,7 +214,7 @@ main {
     border-radius: 10px;
 }
 
-#buttonClose {
+#buttonCloseEdit1 {
     background-color: #ff3b3b;
     display: flex;
     align-items: center;
@@ -214,11 +226,13 @@ main {
     align-self: flex-end;
 }
 
-#buttonClose img {
+#buttonCloseEdit1 img {
     width: 140%;
     border-radius: 20px;
     margin-top: 2px;
 }
+
+
 
 /* MODAL DELETE 1 */
 .main__modais__modalDelete1 {
@@ -241,10 +255,28 @@ main {
 
 }
 
+#buttonCloseDelete1 {
+    background-color: #ff3b3b;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    border: 0;
+    align-self: flex-end;
+}
+
+#buttonCloseDelete1 img {
+    width: 140%;
+    border-radius: 20px;
+    margin-top: 2px;
+}
+
 /* MODAL HIDDEN 1 */
- .hidden{
+.hidden {
     display: none;
- }
+}
 
 @media (max-width: 800px) {
     .container__posts2 {
@@ -293,7 +325,7 @@ main {
         justify-content: space-between;
         color: white;
     }
-    
+
     .container__posts2 li figure img {
         width: 122px;
         height: 115px;
@@ -371,6 +403,24 @@ main {
         width: 30%;
     }
 
+    #buttonCloseDelete2 {
+        background-color: #ff3b3b;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+        border: 0;
+        align-self: flex-end;
+    }
+    
+    #buttonCloseDelete2 img {
+        width: 140%;
+        border-radius: 20px;
+        margin-top: 2px;
+    }
+
     /* MODAL EDIT 2 */
     .main__modais__modalEdit2 {
         display: flex;
@@ -383,7 +433,7 @@ main {
         flex-direction: column;
         align-items: center;
         padding: 10px;
-        
+
     }
 
     #main__modais__modalEdit2__input {
@@ -396,7 +446,25 @@ main {
         padding: 5px 10px;
         border-radius: 15px;
         width: 25%;
-        font-size:  90%;
+        font-size: 90%;
+    }
+
+    #buttonCloseEdit2 {
+        background-color: #ff3b3b;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 25px;
+        height: 25px;
+        border-radius: 20px;
+        border: 0;
+        align-self: flex-end;
+    }
+    
+    #buttonCloseEdit2 img {
+        width: 140%;
+        border-radius: 20px;
+        margin-top: 2px;
     }
 
 }

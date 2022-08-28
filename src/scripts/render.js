@@ -28,11 +28,11 @@ export class RenderMobile {
         divBtn.classList.add("botoesPost")
 
         const btnEdit = document.createElement("button")
-        btnEdit.classList.add("buttonEdit")
+        btnEdit.classList.add("buttonEdit1")
         const imgEdit =document.createElement("img")
 
         const btnDelete = document.createElement("button")
-        btnDelete.classList.add("buttonDelete")
+        btnDelete.classList.add("buttonDelete1")
         const imgDelete =document.createElement("img")
 
         const user = localStorage.getItem("S5-10: userId")
@@ -106,9 +106,11 @@ export class RenderDesktop {
         divBtn.classList.add("botoesPost") 
 
         const btnEdit = document.createElement("button")
+        btnEdit.classList.add("buttonEdit1")
         const imgEdit =document.createElement("img")
 
         const btnDelete = document.createElement("button")
+        btnDelete.classList.add("buttonDelete1")
         const imgDelete =document.createElement("img")
         
         const divText = document.createElement("div")
