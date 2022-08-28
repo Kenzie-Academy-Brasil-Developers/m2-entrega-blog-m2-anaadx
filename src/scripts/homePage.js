@@ -1,7 +1,7 @@
 import { ApiRequests } from "./requests.js"
 import { RenderDesktop, RenderMobile} from "./render.js"
 import { Modal } from "./modal.js"
-import { UpdatePostClass } from "./edit.js"
+import { UpdatePostCard } from "./edit.js"
 import { Delete} from "./delete.js"
 
 export class homePage{
@@ -81,7 +81,7 @@ Modal.showDeleteModal()
 Modal.closeModal()
 
 Delete.deletePost()
-UpdatePostClass.updatePost()
+UpdatePostCard.updatePost()
 
 
 

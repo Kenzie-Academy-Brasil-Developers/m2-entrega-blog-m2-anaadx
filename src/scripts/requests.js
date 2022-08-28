@@ -1,3 +1,4 @@
+
 class ApiRequests {
 
     static baseUrl = "https://blog-m2.herokuapp.com"
