@@ -88,7 +88,7 @@ class ApiRequests {
     }
 
     static async updatePost(body, id){
-        const post = await fetch (`${this.baseUrl}/posts/${localStorage.getItem(id)}`, {
+        const post = await fetch (`${this.baseUrl}/posts/${id}`, {
             method : "PATCH",
             headers: this.headers,
             body: JSON.stringify(body)
@@ -100,13 +100,14 @@ class ApiRequests {
     }
 
     static async deletePost(id) {
-        const deletedPost = await fetch(`${this.baseUrl}/posts/${localStorage.getItem(id)}`, {
+        const deletedPost = await fetch(`${this.baseUrl}/posts/${id}`, {
           method: "DELETE",
           headers: this.headers
         })
         .then(res => res.json())
         .then(res => {
           console.log('produto removido com sucesso')
+          window.location.assign("../pages/homePage.html")
           return res
         })
         .catch(err => {

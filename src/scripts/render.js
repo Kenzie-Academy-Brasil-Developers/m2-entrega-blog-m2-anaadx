@@ -37,9 +37,8 @@ export class RenderMobile {
 
         const user = localStorage.getItem("S5-10: userId")
         
-
         li.key = post.user.id
-        li.id = post.user.id
+        li.id = post.id
 
         img.src = post.user.avatarUrl
         img.alt = "Foto de  Perfil do dono do post"
@@ -52,9 +51,11 @@ export class RenderMobile {
         postData.innerText = data
 
         imgEdit.src = "../assets/lapis.jpg"
+        imgEdit.setAttribute("id",post.id)
         imgEdit.alt = "Lapis"
 
         imgDelete.src = "../assets/lixeira.jpg"
+        imgDelete.setAttribute("id",post.id)
         imgDelete.alt = "Lixo"
 
         btnEdit.appendChild(imgEdit)
@@ -106,9 +107,11 @@ export class RenderDesktop {
         divBtn.classList.add("botoesPost") 
 
         const btnEdit = document.createElement("button")
+        btnEdit.classList.add("buttonEdit")
         const imgEdit =document.createElement("img")
 
         const btnDelete = document.createElement("button")
+        btnDelete.classList.add("buttonDelete")
         const imgDelete =document.createElement("img")
         
         const divText = document.createElement("div")
@@ -121,7 +124,7 @@ export class RenderDesktop {
         const user = localStorage.getItem("S5-10: userId")
 
         li.key = post.user.id
-        li.id = post.user.id
+        li.id = post.id
 
         img.src = post.user.avatarUrl
         img.alt = "Foto de  Perfil do dono do post"
@@ -134,9 +137,11 @@ export class RenderDesktop {
         postData.innerText = data
         
         imgEdit.src = "../assets/lapis.jpg"
+        imgEdit.setAttribute("id",post.id)
         imgEdit.alt = "Lapis"
 
         imgDelete.src = "../assets/lixeira.jpg"
+        imgDelete.setAttribute("id",post.id)
         imgDelete.alt = "Lixo"
 
         btnEdit.appendChild(imgEdit)

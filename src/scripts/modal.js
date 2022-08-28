@@ -1,9 +1,9 @@
 export class Modal {
     static showEditModal() {
-      const modalEdit = document.querySelector(".modal")
+      const modalEdit = document.getElementById("modalEdit")
+      
       const modalEditButton = document.querySelectorAll(".buttonEdit")
       
-  
       modalEditButton.forEach((btn) => {
         btn.addEventListener('click', (event) => {
           localStorage.setItem("S5-10: postId", event.target.id)
@@ -12,20 +12,26 @@ export class Modal {
       })
     }
 
-    static closeModal() {
-    
-    const closeBtn = document.querySelector('#buttonClose')
-    const modal = document.querySelector('.modal')
+  
+  static closeDeleteModal() {
+    const closeBtn = document.querySelectorAll('#buttonClose')
+    const modal = document.querySelectorAll(".modal")
 
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden')
-      window.location.assign("../pages/homePage.html")
+    closeBtn.forEach( (button) => {
+      button.addEventListener('click', () => {
+      
+        modal[0].classList.add('hidden')
+        modal[1].classList.add('hidden')
+        
+      })
     })
+  
   }
 
   static showDeleteModal() {
     const modalDeleteBtn = document.querySelectorAll('.buttonDelete')
-    const modal = document.querySelector('.modal')
+    const modal = document.getElementById("modalDelete")
+    
 
     modalDeleteBtn.forEach(btn => {
       btn.addEventListener('click', (event) => {

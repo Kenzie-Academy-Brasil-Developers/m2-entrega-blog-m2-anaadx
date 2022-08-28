@@ -2,7 +2,7 @@ import { ApiRequests } from "./requests.js"
 import { RenderDesktop, RenderMobile} from "./render.js"
 import { Modal } from "./modal.js"
 import { UpdatePostCard } from "./edit.js"
-import { Delete} from "./delete.js"
+import { Delete } from "./delete.js"
 
 export class homePage{
 
@@ -67,6 +67,8 @@ export class homePage{
     }
 }
 
+
+
 const posts = await ApiRequests.getPosts("page=1")
 
 homePage.renderHomeDesktop(posts.data)
@@ -77,11 +79,15 @@ homePage.userInfo()
 homePage.logout()
 
 Modal.showEditModal()
-Modal.showDeleteModal()
-Modal.closeModal()
 
-Delete.deletePost()
-UpdatePostCard.updatePost()
+
+Modal.showDeleteModal()
+Modal.closeDeleteModal()
+
+
+
+UpdatePostCard.update()
+
 
 
 
