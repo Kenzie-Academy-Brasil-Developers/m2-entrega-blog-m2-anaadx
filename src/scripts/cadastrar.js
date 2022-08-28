@@ -1,3 +1,4 @@
+
 import { ApiRequests } from "./requests.js";
 
 class cadastrar { 

@@ -1,6 +1,8 @@
 
 export class RenderMobile {
+    
     static renderPostsListMobile(array)  {
+        console.log("OK render M")
         const section = document.querySelector(".posts")
         const ul = document.querySelector(".container__posts1")
         section.append(ul)
@@ -69,11 +71,13 @@ export class RenderMobile {
         return li
     }
     
+    
 }
 
 
 export class RenderDesktop {
     static renderPostsListDesktop(array)  {
+        console.log("OK render")
 
         const section = document.querySelector(".posts")
         const ul = document.querySelector(".container__posts2")
