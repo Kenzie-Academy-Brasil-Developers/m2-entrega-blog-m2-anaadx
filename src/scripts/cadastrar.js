@@ -5,6 +5,7 @@ class cadastrar {
     static createUser() {
 
         const nameInput = document.getElementById("nomeDeUsuarioCadastro")
+        console.log(nameInput)
         const emailInput = document.getElementById("emailCadastro")
         const avatarInput = document.getElementById("fotoCadastro")
         const passwordInput = document.getElementById("senhaCadastro")

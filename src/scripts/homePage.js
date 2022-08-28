@@ -41,6 +41,7 @@ class homePage{
             }
             
         ApiRequests.createPost(newPost)
+        
         })
     }
 
