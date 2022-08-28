@@ -9,14 +9,14 @@ export class Modal {
     modalEditButton1.forEach((btn) => {
       btn.addEventListener('click', (event) => {
         localStorage.setItem("S5-10: postId", event.target.id)
-        modalEdit1.classList.toggle('hidden')
+        modalEdit1.classList.toggle('modalHidden')
       })
     })
 
     modalEditButton2.forEach((btn) => {
       btn.addEventListener('click', (event) => {
         localStorage.setItem("S5-10: postId", event.target.id)
-        modalEdit2.classList.toggle('hidden')
+        modalEdit2.classList.toggle('modalHidden')
       })
     })
 
@@ -35,19 +35,19 @@ export class Modal {
     const modalDelete2 = document.querySelector(".main__modais__modalDelete2")
 
     buttonCloseEdit1.addEventListener('click', () => {
-      modalEdit1.classList.add('hidden')
+      modalEdit1.classList.add('modalHidden')
     })
 
     buttonCloseEdit2.addEventListener('click', () => {
-      modalEdit2.classList.add('hidden')
+      modalEdit2.classList.add('modalHidden')
     })
 
     buttonCloseDelete1.addEventListener('click', () => {
-      modalDelete1.classList.add('hidden')
+      modalDelete1.classList.add('modalHidden')
     })
 
     buttonCloseDelete2.addEventListener('click', () => {
-      modalDelete2.classList.add('hidden')
+      modalDelete2.classList.add('modalHidden')
     })
   }
 
@@ -60,14 +60,14 @@ export class Modal {
     modalDeleteBtn1.forEach((btn) => {
       btn.addEventListener('click', (event) => {
         localStorage.setItem("S5-10: postId", event.target.id)
-        modalDelete1.classList.toggle('hidden')
+        modalDelete1.classList.toggle('modalHidden')
       })
     })
 
     modalDeleteBtn2.forEach((btn) => {
       btn.addEventListener('click', (event) => {
         localStorage.setItem("S5-10: postId", event.target.id)
-        modalDelete2.classList.toggle('hidden')
+        modalDelete2.classList.toggle('modalHidden')
       })
     })
   }

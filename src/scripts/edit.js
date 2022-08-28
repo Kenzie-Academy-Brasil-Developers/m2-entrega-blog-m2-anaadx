@@ -22,7 +22,7 @@ export class UpdatePostClass {
           content: postEditContent.value
         }
         await ApiRequests.updatePost(data, updatePostId)
-        modal1.classList.add('hidden')
+        modal1.classList.add('modalHidden')
       
         localStorage.removeItem("S5-10: postId")
         const posts = await ApiRequests.getPosts("page=1")
@@ -41,7 +41,7 @@ export class UpdatePostClass {
           content: postEditContent.value
         }
         await ApiRequests.updatePost(data, updatePostId)
-        modal2.classList.add('hidden')
+        modal2.classList.add('modalHidden')
       
         localStorage.removeItem("S5-10: postId")
         const posts = await ApiRequests.getPosts("page=1")
