@@ -16,8 +16,7 @@ export class UpdatePostClass {
           const updatePostId = localStorage.getItem("S5-10: postId")
     
           const data = {
-            content: postEditContent.value
-            
+          content: postEditContent.value
           }
     
           await ApiRequests.updatePost(data, updatePostId)
@@ -26,8 +25,8 @@ export class UpdatePostClass {
           localStorage.removeItem("S5-10: postId")
     
           const posts = await ApiRequests.getPosts("page=1")
-          homePage.renderHomeMobile (posts)
-          homePage.renderHomeDesktop (posts)
+          homePage.renderHomeMobile(posts)
+          homePage.renderHomeDesktop(posts)
           Modal.showEditModal()
           Modal.closeModal()
         })

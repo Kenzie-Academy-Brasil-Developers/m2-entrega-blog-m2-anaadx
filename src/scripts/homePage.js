@@ -1,8 +1,8 @@
 import { ApiRequests } from "./requests.js";
-import { Modal } from "./modal";
+import { Modal } from "./modal.js";
 import { RenderDesktop, RenderMobile} from "./render.js"
-import { UpdatePostClass } from "./edit"
-import { Delete} from "./delete"
+import { UpdatePostClass } from "./edit.js"
+import { Delete} from "./delete.js"
 
 export class homePage{
 
