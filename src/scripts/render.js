@@ -67,7 +67,7 @@ export class RenderMobile {
 
         figure.appendChild(img)
 
-        li.append(figure, autor, postText, postData, divBtn)
+        li.append(figure, autor, postText, postData)
 
         if (post.user.id == user){
             li.appendChild(divBtn)
@@ -152,7 +152,8 @@ export class RenderDesktop {
 
         figure.appendChild(img)
 
-        div.append(figure, divBtn)
+        div.append(figure)
+        
 
         if (post.user.id == user){
             div.appendChild(divBtn)
