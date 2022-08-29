@@ -24,6 +24,7 @@ export class RenderMobile {
         const postText = document.createElement("p")
         postText.classList.add("escritoPost")
         const postData = document.createElement("p")
+        postData.classList.add("container__posts1__parteEscrita__data")
 
         const divBtn = document.createElement("div")
         divBtn.classList.add("botoesPost")
@@ -66,7 +67,7 @@ export class RenderMobile {
 
         figure.appendChild(img)
 
-        li.append(figure, autor, postText, postData )
+        li.append(figure, autor, postText, postData, divBtn)
 
         if (post.user.id == user){
             li.appendChild(divBtn)
@@ -119,6 +120,7 @@ export class RenderDesktop {
         const postText = document.createElement("p")
         postText.classList.add("escritoPost")
         const postData = document.createElement("p")
+        postData.classList.add("container__posts2__parteEscrita__data")
         
         const user = localStorage.getItem("S5-10: userId")
 
@@ -150,7 +152,7 @@ export class RenderDesktop {
 
         figure.appendChild(img)
 
-        div.appendChild(figure)
+        div.append(figure, divBtn)
 
         if (post.user.id == user){
             div.appendChild(divBtn)
