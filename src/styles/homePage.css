@@ -17,6 +17,7 @@ body {
 
 /* HEADER */
 header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var(--azulForte);
@@ -26,23 +27,35 @@ header {
 }
 
 header button {
-    width: 100px;
-    height: 40px;
-    padding: 5px 15px;
     background-color: white;
     border-radius: 5px;
+    align-self: center;
+    width: 80px;
+    height: 30px;
+    padding: 5px 15px;
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+#userName{
+    align-self: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.header__fotoENome figure img{
+    width: 80px;
+    height: 67px;
+    border-radius: 100px;
 }
 
 .header__fotoENome{
     display: flex;
-    gap: 30px;
+    gap: 5px;
+    margin-left: 5px;
 }
 
-.header__fotoENome figure img{
-    width: 122px;
-    height: 115px;
-    border-radius: 100px;
-}
 
 /* MAIN */
 main {
@@ -194,13 +207,13 @@ main {
 
 /* MODAL*/
 
-.modalContainer{
+.modal{
     display: flex;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.75);
-    position: absolute; 
+    position: fixed; 
     align-items: center;
 }
 
@@ -431,6 +444,30 @@ main {
         border-radius: 15px;
         width: 25%;
         font-size:  90%;
+    }
+
+    /* HEADER */
+    
+    header button {
+        width: 100px;
+        height: 40px;
+        padding: 5px 15px;
+        margin-right: 20px;
+    }
+
+    .header__fotoENome figure img{
+        width: 122px;
+        height: 115px;
+       
+    }
+    
+    #userName{
+    font-size: 40px;
+    }
+
+    .header__fotoENome{
+        gap: 30px;
+        margin-left: 20px;
     }
 
 }

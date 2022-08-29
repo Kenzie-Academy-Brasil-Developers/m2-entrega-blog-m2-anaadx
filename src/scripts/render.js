@@ -30,7 +30,7 @@ export class RenderMobile {
 
         const btnEdit = document.createElement("button")
         btnEdit.classList.add("buttonEdit")
-        const imgEdit =document.createElement("img")
+        const imgEdit = document.createElement("img")
 
         const btnDelete = document.createElement("button")
         btnDelete.classList.add("buttonDelete")
@@ -73,10 +73,7 @@ export class RenderMobile {
         }
         return li
     }
-    
-    
 }
-
 
 export class RenderDesktop {
     static renderPostsListDesktop(array)  {
@@ -120,6 +117,7 @@ export class RenderDesktop {
 
         const autor = document.createElement("h2")
         const postText = document.createElement("p")
+        postText.classList.add("escritoPost")
         const postData = document.createElement("p")
         
         const user = localStorage.getItem("S5-10: userId")
