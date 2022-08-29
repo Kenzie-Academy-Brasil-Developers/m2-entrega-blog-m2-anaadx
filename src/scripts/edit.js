@@ -22,7 +22,6 @@ export class UpdatePostCard {
         const data = {
           content: postEditContent.value
         }
-        console.log(data)
         await ApiRequests.updatePost(data, updatePostId)
 
         modal1.classList.add('hidden')
@@ -50,7 +49,6 @@ static updateDesktop () {
       const data = {
         content: postEditContent.value
       }
-      console.log(data)
       await ApiRequests.updatePost(data, updatePostId)
 
       modal1.classList.add('hidden')
